@@ -19,7 +19,7 @@ try:
     cursor.close()
     mydb.close()
 
-except Exception as e:
+except mysql.connector.Error as e:
     print(f"Error: {e}")
     print("Could not connect to database")
 
